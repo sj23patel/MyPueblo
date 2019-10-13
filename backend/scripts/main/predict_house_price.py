@@ -59,6 +59,6 @@ def main():
     values = df.pred_value.values.tolist()
     for j in range(len(ids)):
         print('Estimated value for rental ID ' + str(ids[j]) + ' is $' + str(values[j]))
-    df.to_csv(path + 'pricepredictions/train_pred.csv')
+    df.to_csv(path + 'pricepredictions/train_pred.csv',index=False)
 
 main()
