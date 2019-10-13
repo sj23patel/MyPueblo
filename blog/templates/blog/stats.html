@@ -1,23 +1,48 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var $j = jQuery.noConflict();
+        function ProcessSimpleCgi()
+        {
+            $j.ajax(
+            {
+                type: "POST",
+                url: "/static/blog/bankstatement_classification.csv",
+                data: "",
+                dataType: "html",
+                success: function (html)
+                {
+                    $("#classify-bank-statement-results").html(html);
+                },
+                error: function(request, ajaxOptions, thrownError)
+                {
+                    $("#classify-bank-statement-results").html("Request error occurred");
+                }
+            });
+        }
+        // function superSpeed() {
+        //     $("#classify-bank-statement-results").html("Alright m8");
+        // }
+    </script>
     <div style="margin-top: 80px;">
-        <a href="#" class="mainButton">Classify Bank Statement</a>
+        <a onclick="ProcessSimpleCgi()" class="mainButton">Classify Bank Statement</a>
         <br/>
-        <div name="classify-bank-statement-results">
+        <div id="classify-bank-statement-results">
 
         </div>
     </div>
     <div style="margin-top: 80px;">
-        <a href="#" class="mainButton">Predict Property Value</a>
+        <a onclick="" class="mainButton">Predict Property Value</a>
         <br/>
-        <div name="predict-property-value-results">
+        <div id="predict-property-value-results">
 
         </div>
     </div>
     <div style="margin-top: 80px;">
-        <a href="#" class="mainButton">Generate Total Cost</a>
+        <a onclick="" class="mainButton">Generate Total Cost</a>
         <br/>
-        <div name="generate-total-cost-results">
+        <div id="generate-total-cost-results">
 
         </div>
     </div>
