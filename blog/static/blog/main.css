@@ -1,5 +1,8 @@
 body {
-  background: #fafafa;
+  background: url(http://460xn7309grtq8dgf9er612l-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/Most-Popular-Los-Angeles-Neighborhoods-for-Renters-Silver-Lake.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
   color: #333333;
   margin-top: 0;
 }
@@ -29,9 +32,8 @@ ul {
 }
 
 .content-section {
-  background: #ffffff;
+  background: rgba(0,0,0,0.7);
   padding: 10px 20px;
-  border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
 }
@@ -82,3 +84,32 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.home-main-panel {
+  font-size: 30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 15%;
+  background-color: rgba(0,0,0,0.7);
+  height: 350px;
+}
+
+.main-forms {
+  color: white;
+}
+
+.main-forms-input {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.main-forms-input-fields {
+  border-radius: 10px;
+  width: 50%;
+}
+
+.main-forms-input-sub {
+  font-size: 10px;
+}
+

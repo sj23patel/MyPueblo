@@ -4,18 +4,27 @@
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy }}
+            <fieldset class="main-forms">
+                <legend class="border-bottom mb-4">Register</legend>
+                <div class="main-forms-input">Username: <input type="text" class="main-forms-input-fields" name="username">
+                    <p class="main-forms-input-sub">Usernames must be between 8 and 20 characters.</p>
+                </div>
+                <br/>
+                <div class="main-forms-input">Email: <input type="text" class="main-forms-input-fields" name="email">
+                </div>
+                <br/>
+                <div class="main-forms-input">Password: <input type="password" class="main-forms-input-fields" name="password">
+                    <p class="main-forms-input-sub">Passwords must be between 8 and 30 characters and must contain one uppercase letter, one lowercase letter, a number, and a special character of ONLY the following: !@#^&*.</p>
+                </div>
+                <br/>
+                <div class="main-forms-input">Confirm Password: <input type="password" class="main-forms-input-fields" name="confirmpassword">
+                    <p class="main-forms-input-sub">Passwords must be between 8 and 30 characters and must contain one uppercase letter, one lowercase letter, a number, and a special character of ONLY the following: !@#^&*.</p>
+                </div>
             </fieldset>
-            <div class="form-group">
+            <br/>
+            <div class="main-forms">
                 <button class="btn btn-outline-info" type="submit">Sign Up</button>
             </div>
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
-            </small>
-        </div>
     </div>
 {% endblock content %}
