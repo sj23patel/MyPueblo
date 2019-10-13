@@ -28,8 +28,8 @@ def main():
     tick = mtick.StrMethodFormatter(fmt)
     ax.yaxis.set_major_formatter(tick)
     plt.xlabel('')
-    plt.xticks(fontsize=20)
-    plt.yticks(fontsize=20)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
 
     plt.savefig(path+'Figure/total_cost.png', dpi=1200)
     plt.show()
