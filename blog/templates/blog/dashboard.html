@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="column">
+            <h1 style="margin-top: 100px;">Welcome, User!</h1>
+        </div>
+        <div class="column">
+                <div style="margin-top: 80px; margin-left: 90px;">
+                    <a href="#" class="mainButton">+ Add Property</a>
+                </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="column">
+                <div style="padding-top: 8px;"><strong>Earnings:</strong> <input class="mainTextDisplay" type="text" name="earnings" disabled></div>
+                <br/>
+                <div style="padding-top: 8px;"><strong>Losses:</strong> <input class="mainTextDisplay" type="text" name="losses" disabled></div>
+                <br/>
+                <div style="padding-top: 8px;"><strong>Net:</strong> <input class="mainTextDisplay" type="text" name="net" disabled></div>
+                <br/>
+        </div>
+        <div class="column"></div>
+    </div>
+{% endblock content %}
