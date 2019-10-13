@@ -47,24 +47,18 @@ def convert_text_numeric(df):
 
 def main():
     path = 'G:/My Drive/NCSU/Hackathons/HackNC2019/MyPueblo/backend/'
-
     model = load_model(path+'model/house_price.h5')
-
     df = pd.read_csv(path + 'data/house_price/train.csv')
     IDs     = df[['Id']]
     pre_data    = df.drop(columns=['Id','SalePrice'])
-
     data = data_process(pre_data)
     predictions = model.predict(data)
     predictions_list  = numpy.concatenate(predictions, axis=0).tolist()
-
     df['pred_value'] = predictions_list
-
     ids = df.Id.values.tolist()
     values = df.pred_value.values.tolist()
     for j in range(len(ids)):
         print('Estimated value for rental ID ' + str(ids[j]) + ' is $' + str(values[j]))
-
     df.to_csv(path + 'pricepredictions/train_pred.csv')
 
 main()
